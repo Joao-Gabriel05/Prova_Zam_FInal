@@ -11,6 +11,7 @@ public class Musica {
     private String titulo;
     private String descricao;
     private Integer tempo;
+    private String email;
 
     public String getId() {
         return id;
@@ -42,5 +43,13 @@ public class Musica {
 
     public void setTempo(Integer tempo) {
         this.tempo = tempo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -18,7 +18,17 @@ public class MusicaService {
         return musicaRepository.save(musica);
     }
 
-    public List<Musica> list() {
+    public List<Musica> list(String email, List<String> roles) {
+
+        if (roles.contains("ADMIN")) {
+            return musicaRepository.findByEmail(email);
+        }
+
         return musicaRepository.findAll();
+    }
+
+    public void delete(String id) {
+        Musica musica = musicaRepository.findById(id).get();
+        musicaRepository.delete(musica);
     }
 }
