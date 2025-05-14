@@ -17,17 +17,13 @@ public class TarefaController {
     @Autowired
     private TarefaService tarefaService;
 
-    /**
-     * Lista todas as tarefas (acesso geral).
-     */
+
     @GetMapping
     public List<Tarefa> listarTarefas() {
         return tarefaService.listarTarefas();
     }
 
-    /**
-     * Cria uma nova tarefa (apenas ADMIN).
-     */
+
     @PostMapping
     public Tarefa criarTarefa(
             @AuthenticationPrincipal Jwt jwt,
@@ -41,9 +37,7 @@ public class TarefaController {
         return tarefaService.criarTarefa(tarefa);
     }
 
-    /**
-     * Deleta uma tarefa pelo ID (apenas ADMIN).
-     */
+
     @DeleteMapping("/{id}")
     public void deletarTarefa(
             @AuthenticationPrincipal Jwt jwt,

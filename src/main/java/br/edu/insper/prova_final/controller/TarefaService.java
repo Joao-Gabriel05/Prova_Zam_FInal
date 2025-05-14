@@ -15,16 +15,11 @@ public class TarefaService {
         this.tarefaRepository = tarefaRepository;
     }
 
-    /**
-     * Cria uma nova tarefa. (Apenas ADMIN)
-     */
     public Tarefa criarTarefa(Tarefa tarefa) {
         return tarefaRepository.save(tarefa);
     }
 
-    /**
-     * Deleta uma tarefa pelo ID. (Apenas ADMIN)
-     */
+
     public void deletarTarefa(String id) {
         if (!tarefaRepository.existsById(id)) {
             throw new IllegalArgumentException("Tarefa não encontrada com id: " + id);
@@ -32,9 +27,6 @@ public class TarefaService {
         tarefaRepository.deleteById(id);
     }
 
-    /**
-     * Lista todas as tarefas.
-     */
     public List<Tarefa> listarTarefas() {
         return tarefaRepository.findAll();
     }
