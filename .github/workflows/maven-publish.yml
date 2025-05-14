@@ -50,5 +50,5 @@ jobs:
           docker stop prova
           docker rm --force prova
           docker run -d -p 8081:8081 \
-          -e URI_DB=${{ secrets.URI_DB }} \
+          -e URI_DB=mongodb+srv://eduardo:eduardo@cluster0.iabbvdx.mongodb.net/prova_joaog \
           --name prova --network=rede joaofaraco05/prova-ci:${{ github.sha }}

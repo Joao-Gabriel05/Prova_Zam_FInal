@@ -1,4 +1,4 @@
-package br.edu.insper.prova.config;
+package br.edu.insper.prova_final;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
