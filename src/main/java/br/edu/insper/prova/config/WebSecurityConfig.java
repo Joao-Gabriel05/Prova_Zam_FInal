@@ -1,4 +1,4 @@
-package br.edu.insper.musica.config;
+package br.edu.insper.prova.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

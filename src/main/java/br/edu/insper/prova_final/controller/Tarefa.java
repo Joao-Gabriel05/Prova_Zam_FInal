@@ -1,16 +1,16 @@
-package br.edu.insper.musica.controller;
+package br.edu.insper.prova_final.controller;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
-public class Musica {
+public class Tarefa {
 
     @Id
     private String id;
     private String titulo;
     private String descricao;
-    private Integer tempo;
+    private String prioridade;
     private String email;
 
     public String getId() {
@@ -37,12 +37,12 @@ public class Musica {
         this.descricao = descricao;
     }
 
-    public Integer getTempo() {
-        return tempo;
+    public String getPrioridade() {
+        return prioridade;
     }
 
-    public void setTempo(Integer tempo) {
-        this.tempo = tempo;
+    public void setPrioridade(String prioridade) {
+        this.prioridade = prioridade;
     }
 
     public String getEmail() {
